@@ -14,3 +14,5 @@ class Solution {
     return second_largest;
     }
 }
+
+// TC - O(n), SC - O(1)
