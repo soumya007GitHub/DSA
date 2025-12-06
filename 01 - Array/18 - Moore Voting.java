@@ -16,4 +16,6 @@ class Solution {
     }
 }
 
+
+// to find element whose frequency is more than n/2 and moore voting only works for question whose minimum threshold value is n/2
 // TC - O(N) SC - O(1)
