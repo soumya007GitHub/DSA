@@ -31,5 +31,5 @@ class Solution {
 }
 
 
-// TC - O(N log N) + O(N log(maxDistance))
+// TC - O(nLog(max-min))
 // SC - O(1)
