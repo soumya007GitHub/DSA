@@ -20,4 +20,4 @@ class Solution {
 }
 
 // TC - O(n)
-// SC - O(total number of alphabets)
+// SC - O(1)
