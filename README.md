@@ -48,17 +48,6 @@ Each folder contains **Java solution files** with **clean, optimized code** and 
 
 Check my LeetCode profile here: [LeetCode](https://leetcode.com/soumya724/)  
 
-![LeetCode Stats](https://leetcode-stats-six.vercel.app/?username=soumya724&theme=dark)
-
----
-
-## 💻 GitHub Stats
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=soumya007GitHub&show_icons=true&theme=radical" width="48%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=soumya007GitHub&theme=radical" width="48%" />
-</div>
-
 ---
 
 ## 🔗 Connect with Me
