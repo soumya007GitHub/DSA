@@ -29,6 +29,7 @@ Organized for **easy reference & practice** — perfect for **LeetCode, intervie
 
 ```
 DSA/
+├─ 00 - Daily Challenge   # Daily LeetCode challenge problems from each month
 ├─ 01 - Array             # Array problems & solutions
 ├─ 02 - Binary Search     # Binary search related problems
 ├─ 03 - Strings           # String manipulation problems
