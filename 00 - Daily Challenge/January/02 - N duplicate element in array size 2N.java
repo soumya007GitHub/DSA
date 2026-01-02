@@ -1,15 +1,20 @@
 class Solution {
     public int repeatedNTimes(int[] nums) {
-        HashSet<Integer> set = new HashSet<>();
         for(int i = 0; i<nums.length; ++i){
-            if(set.contains(nums[i])){
-                return nums[i];
+            if(i+1 < nums.length){
+                if(nums[i] == nums[i+1]){
+                    return nums[i];
+                }
+                if(i+2 < nums.length){
+                    if(nums[i] == nums[i+2]){
+                        return nums[i];
+                    }
+                }
             }
-            set.add(nums[i]);
         }
-        return -1;
+        return nums[nums.length-1];
     }
 }
 
 // TC - O(N)
-// SC - O(N)
+// SC - O(1)
