@@ -1,42 +1,28 @@
 class Solution {
-    public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode temp = head;
+    public ListNode rotateRight(ListNode head, int k) {
+        if(head == null || head.next == null || k == 0){
+            return head;
+        }
         int size = 0;
-        while(temp != null){
+        ListNode temp = head;
+        while(temp.next != null){
             ++size;
             temp = temp.next;
         }
-        if(size < k){
+        if(k % (size+1) == 0){
             return head;
         }
-        temp = head;
-        ListNode traverse = head;
-        int count = 1;
-        while(count != k){
-            traverse = traverse.next;
+        k = k%(size+1);
+        temp.next = head;
+        size = size+1-k;
+        int count = 0;
+        while(count != size){
+            temp = temp.next;
             ++count;
         }
-        ListNode next = traverse.next;
-        traverse.next = null;
-        ListNode rotated = rotate(head);
-        if(temp == head){
-            head = rotated;
-        }
-        temp.next = next;
-        ListNode previous = temp;
-        temp = temp.next;
-        previous.next = reverseKGroup(temp, k);
+        head = temp.next;
+        temp.next = null;
         return head;
-    }
-    public ListNode rotate(ListNode head){
-        if(head == null || head.next == null){
-            return head;
-        }
-        ListNode newHead = rotate(head.next);
-        ListNode front = head.next;
-        front.next = head;
-        head.next = null;
-        return newHead;
     }
 }
 
