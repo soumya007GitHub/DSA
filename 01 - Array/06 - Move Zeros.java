@@ -1,20 +1,22 @@
 class Solution {
     public void moveZeroes(int[] nums) {
-        int count = 0;
-        int position = 0;
-        for(int i = 0; i<nums.length; ++i){
-            if(nums[i] != 0){
-                nums[position] = nums[i];
-                ++position;
+        int i = 0;
+        int j = 0;
+        while(j < nums.length){
+            if(nums[j] != 0){
+                nums[i] = nums[j];
+                ++i;
             }
-            else{
-                ++count;
-            }
+            ++j;
         }
-        for(int i = nums.length-count; i<nums.length; ++i){
+        if(j >= nums.length){
+        while(i < nums.length){
             nums[i] = 0;
+            ++i;
+        }
         }
     }
 }
+
 
 // TC - O(N) SC - O(1)
