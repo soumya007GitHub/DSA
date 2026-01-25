@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# DSA Solutions Repository
+# DSA Solutions Repository 
 
 Hi! I'm Soumya Ranjan Tripathy 👋  
 I'm a **Full Stack Developer & DSA Enthusiast**.  
