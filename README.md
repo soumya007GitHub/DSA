@@ -34,6 +34,10 @@ DSA/
 ├─ 02 - Binary Search     # Binary search related problems
 ├─ 03 - Strings           # String manipulation problems
 ├─ 04 - Linked List       # Singly & Doubly Linked List problems
+├─ 05 - Recursion         # Resursion & backtracking problems
+├─ 06 - Stack             # Stack Problems
+├─ 05 - Queue             # Queue Problems
+├─ DSA Revision Tracker   # Excel Sheet to track the DSA Problems for revision
 ```
 
 Each folder contains **Java solution files** with **clean, optimized code** and comments for clarity.  
@@ -42,10 +46,10 @@ Each folder contains **Java solution files** with **clean, optimized code** and 
 
 ## 🔥 LeetCode Metrics
 
-- **170+ Problems Solved**
+- **230+ Problems Solved**
 - **1414 LeetCode Rating**
 - **63-Day Streak**
-- **100+ Active Days**
+- **120+ Active Days**
 
 Check my LeetCode profile here: [LeetCode](https://leetcode.com/soumya724/)  
 
