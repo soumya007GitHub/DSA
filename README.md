@@ -36,7 +36,7 @@ DSA/
 ├─ 04 - Linked List       # Singly & Doubly Linked List problems
 ├─ 05 - Recursion         # Resursion & backtracking problems
 ├─ 06 - Stack             # Stack Problems
-├─ 05 - Queue             # Queue Problems
+├─ 08 - Queue             # Queue Problems
 ├─ DSA Revision Tracker   # Excel Sheet to track the DSA Problems for revision
 ```
 
