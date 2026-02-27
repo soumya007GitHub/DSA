@@ -1,53 +1,50 @@
-
 class Solution {
+    class Pair{
+        TreeNode node;
+        int num;
+        Pair(TreeNode node,int num){
+            this.node = node;
+            this.num = num;
+        }
+    }
     List<List<Integer>> treeTraversal(TreeNode root) {
-        List<List<Integer>> outer = new ArrayList<>();
-        List<Integer> inner = new ArrayList<>();
+        List<Integer> preOrder = new ArrayList<>();
+        List<Integer> inOrder = new ArrayList<>();
+        List<Integer> postOrder = new ArrayList<>();
+        Stack<Pair> stack = new Stack<>();
+        stack.push(new Pair(root, 1));
         if(root == null){
-            return outer;
+            return new ArrayList<>();
         }
-        // In-order
-        inorder(inner, root);
-        outer.add(inner);
-        inner =  new ArrayList<>();
-        // Pre-order
-        preorder(inner, root);
-        outer.add(inner);
-        inner =  new ArrayList<>();
-        // Post-order
-        postorder(inner, root);
-        outer.add(inner);
-
-        return outer;
-    }
-    public void inorder(List<Integer> inner, TreeNode root){
-        if(root == null){
-            return;
+        List<List<Integer>> answer = new ArrayList<>();
+        while(!stack.isEmpty()){
+            Pair now = stack.pop();
+            if(now.num == 1){
+                preOrder.add(now.node.data);
+                ++now.num;
+                stack.push(now);
+                if(now.node.left != null){
+                    stack.push(new Pair(now.node.left, 1));
+                }
+            }
+            else if(now.num == 2){
+                inOrder.add(now.node.data);
+                ++now.num;
+                stack.push(now);
+                if(now.node.right != null){
+                    stack.push(new Pair(now.node.right, 1));
+                }
+            }
+            else{
+                postOrder.add(now.node.data);
+            }
         }
-        inorder(inner, root.left);
-        inner.add(root.data);
-        inorder(inner, root.right);
-        return;
-    }
-    public void preorder(List<Integer> inner, TreeNode root){
-        if(root == null){
-            return;
-        }
-        inner.add(root.data);
-        preorder(inner, root.left);
-        preorder(inner, root.right);
-        return;
-    }
-    public void postorder(List<Integer> inner, TreeNode root){
-        if(root == null){
-            return;
-        }
-        postorder(inner, root.left);
-        postorder(inner, root.right);
-        inner.add(root.data);
-        return;
+        answer.add(inOrder);
+        answer.add(preOrder);
+        answer.add(postOrder);
+        return answer;
     }
 }
 
-// TC - O(N) - N - number of nodes
-// SC - O(H) - H - height of tree (recursive stack)
+// TC - O(3N) - N = number of nodes in binary tree, 3 bcz for each node we are incrementing till 3 so for each node 3 times popping and pushing into the stack.
+// SC - O(4N) - 3N for preorder, inorder, postorder list and another N for stack.
