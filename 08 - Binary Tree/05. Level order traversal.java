@@ -3,32 +3,23 @@ class Solution {
         if(root == null){
             return new ArrayList<>();
         }
-        List<List<Integer>> outer = new ArrayList<>();
+        Queue<TreeNode> q = new LinkedList<>();
         List<Integer> inner = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        queue.add(null);
-        while(queue.size() > 0){
-            if(queue.peek() != null){
-                if(queue.peek().left != null){
-                    queue.add(queue.peek().left);
-                }
-                if(queue.peek().right != null){
-                    queue.add(queue.peek().right);
-                }
-                inner.add(queue.remove().val);
+        List<List<Integer>> outer = new ArrayList<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            int size = q.size();
+            for(int i = 0; i<size; ++i){
+                TreeNode current = q.remove();
+                if(current.left != null) q.add(current.left);
+                if(current.right != null) q.add(current.right);
+                inner.add(current.val);
             }
-            else{
-                queue.remove();
-                outer.add(inner);
-                inner = new ArrayList<>();
-                if(!queue.isEmpty()){
-                    queue.add(null);
-                }
-            }
+            outer.add(inner);
+            inner = new ArrayList<>();
         }
         return outer;
     }
 }
-// Time Complexity: O(n) where n is the number of nodes in the tree
-// Space Complexity: O(n) where n is the number of nodes in the tree
+// Time Complexity: O(n) for each node we are running a loop to add left and right nodes if present
+// Space Complexity: O(n) queue will store each node
