@@ -23,7 +23,6 @@ class Solution {
 
 class Solution {
     public int frogJump(int[] heights) {
-        int[] dp = new int[heights.length];
         int initial = 0;
         int initial2 = 0;
         for(int i = 1; i<heights.length; ++i){
