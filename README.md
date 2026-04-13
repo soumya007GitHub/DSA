@@ -29,15 +29,21 @@ Organized for **easy reference & practice** — perfect for **LeetCode, intervie
 
 ```
 DSA/
-├─ 00 - Daily Challenge   # Daily LeetCode challenge problems from each month
-├─ 01 - Array             # Array problems & solutions
-├─ 02 - Binary Search     # Binary search related problems
-├─ 03 - Strings           # String manipulation problems
-├─ 04 - Linked List       # Singly & Doubly Linked List problems
-├─ 05 - Recursion         # Resursion & backtracking problems
-├─ 06 - Stack             # Stack Problems
-├─ 08 - Queue             # Queue Problems
-├─ DSA Revision Tracker   # Excel Sheet to track the DSA Problems for revision
+├── 00 - Daily Challenge # Monthly LeetCode daily problems
+├── 01 - Array # Array problems & patterns
+├── 02 - Binary Search # Binary search concepts & problems
+├── 03 - Strings # String manipulation problems
+├── 04 - Linked List # Singly & Doubly Linked List problems
+├── 05 - Recursion # Recursion & Backtracking problems
+├── 06 - Stack # Stack-based problems
+├── 07 - Queue # Queue & Deque problems
+├── 08 - Binary Tree # Binary Tree traversal & problems
+├── 09 - Bit Manipulation # Bitwise operations & tricks
+├── 10 - Binary Search Tree # BST problems & operations
+├── 11 - Graph # Graph algorithms (BFS, DFS, etc.)
+├── 12 - DP # Dynamic Programming problems
+├── DSA_Revision_Tracker.xlsx # Track solved problems & revision
+├── README.md # Project documentation
 ```
 
 Each folder contains **Java solution files** with **clean, optimized code** and comments for clarity.  
@@ -46,10 +52,9 @@ Each folder contains **Java solution files** with **clean, optimized code** and 
 
 ## 🔥 LeetCode Metrics
 
-- **230+ Problems Solved**
+- **340+ Problems Solved**
 - **1414 LeetCode Rating**
-- **63-Day Streak**
-- **120+ Active Days**
+- **7-Months Streak**
 
 Check my LeetCode profile here: [LeetCode](https://leetcode.com/soumya724/)  
 
